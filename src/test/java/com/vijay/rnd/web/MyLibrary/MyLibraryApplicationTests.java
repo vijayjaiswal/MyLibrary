@@ -1,6 +1,7 @@
 package com.vijay.rnd.web.MyLibrary;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
@@ -23,11 +24,6 @@ import com.vijay.rnd.web.MyLibrary.persistence.model.Book;
 @SpringBootTest(classes = { MyLibraryApplication.class }, webEnvironment = WebEnvironment.DEFINED_PORT)
 public class MyLibraryApplicationTests {
 	private static final String API_ROOT = "http://localhost:8081/api/books";
-	private RestAssured restAssured;
-
-	@Test
-	public void contextLoads() {
-	}
 
 	@Before
 	public void setUp() {
